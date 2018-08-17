@@ -2,16 +2,13 @@ package org.smart4j.chapter2.service;
 
 import org.smart4j.chapter2.helper.DatabaseHelper;
 import org.smart4j.chapter2.model.Customer;
-import org.smart4j.chapter2.util.PropsUtil;
 
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Properties;
 
 /**
  * Created by wangbin10 on 2018/8/15.
+ * 业务逻辑层，调用DAO层的工具类对实体类进行增删改查
  */
 public class CustomerService {
 

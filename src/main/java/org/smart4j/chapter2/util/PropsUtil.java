@@ -7,6 +7,7 @@ import java.util.Properties;
 
 /**
  * Created by wangbin10 on 2018/8/15.
+ * 从properties文件获取指定属性的值
  */
 public final class PropsUtil {
     public static Properties loadProps(String fileName) {
@@ -57,7 +58,7 @@ public final class PropsUtil {
         return value;
     }
 
-    public static Boolean  getBoolean(Properties props, String key) {
+    public static Boolean getBoolean(Properties props, String key) {
         return getBoolean(props, key, false);
     }
 

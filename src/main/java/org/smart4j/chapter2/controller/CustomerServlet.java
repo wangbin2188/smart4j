@@ -12,20 +12,21 @@ import java.util.List;
 
 /**
  * Created by wangbin10 on 2018/8/17.
+ * 继承HttPServlet，生成Servlet类
  */
 public class CustomerServlet extends HttpServlet {
     private CustomerService customerService;
 
     @Override
     public void init() throws ServletException {
-        customerService=new CustomerService();
+        customerService = new CustomerService();
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<Customer> customerList = customerService.getCustomerList();
-        req.setAttribute("customerList",customerList);
-        req.getRequestDispatcher("/WEB-INF/jsp/customer.jsp").forward(req,resp);
+        req.setAttribute("customerList", customerList);
+        req.getRequestDispatcher("/WEB-INF/jsp/customer.jsp").forward(req, resp);
     }
 
     @Override
